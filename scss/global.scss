@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1b1b1b;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+#step1 video {
+    transition: all 2s;
+    width: 110vw!important;
+    height: 110vh!important;
+    margin-right: 100px;
+}
+
+.play {
+    width: 60%;
+    height: 30%;
+    display: block;
+    position: absolute;
+    z-index: 99;
+}
+
+#step1 .play:hover+video {
+    transform: scale(1.1)
+}
+
+.wrapper {
+    padding-right: 100px;
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#step1 {
+    background-color: #05f05b;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body.step1 .logo .green {
+    display: none;
+}
+
+body.step1 .logo .white {
+    display: none;
+}
+
+body.step2 .logo .green {
+    display: block;
+}
+
+body.step2 .logo .white {
+    display: none;
+}
+
+body.step3 .logo .green {
+    display: none;
+}
+
+body.step3 .logo .white {
+    display: block;
+}
+
+body.step4 .logo .green {
+    display: block;
+}
+
+body.step4 .logo .white {
+    display: none;
+}
+
+#step2 {}
+
+#step2 .inside {
+    padding: 0 100px
+}
+
+#step2 .blocTitle {
+    display: flex;
+    max-width: 70%;
+    margin-bottom: 30px;
+}
+
+#step2 .blocTitle i {
+    font-size: 100px;
+}
+
+#step2 .blocTitle span {
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+#step2.sectactive .blocTitle span {
+    opacity: 1;
+}
+
+#step2 .blocTitle h2 {
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.7s;
+}
+
+#step2.sectactive .blocTitle h2 {
+    opacity: 1;
+}
+
+#step2 .blocContent {
+    padding-left: 30%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.9s;
+}
+
+#step2.sectactive .blocContent {
+    opacity: 1;
+}
+
+#step2 .blocContent p {
+    font-size: 25px;
+    line-height: 39px;
+    text-align: justify;
+}
+
+#step3 {
+    background-color: #05f05b;
+}
+
+#step4 .inside {
+    text-align: center
+}
+
+.countdown {
+    text-align: right;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out 0.8s;
+}
+
+.sectactive .countdown {
+    opacity: 1;
+}
+
+.countdown ul li {
+    display: inline-block;
+    font-size: 90px;
+    color: #fff;
+    font-weight: 900;
+    margin: 0 5px;
+}
+
+.countdown ul li.ds-sec {
+    opacity: 0.6;
+    width: 160px
+}
+
+.countdown ul li small {
+    font-size: 50px;
+    transform: translateY(10px);
+    display: inline-block;
+}
+
+.socials {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+}
+
+.socials li {
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.socials li:hover {
+    transform: scale(1.2)
+}
+
+.socials img {
+    width: 30px;
+}
+
+#scrollSide {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #fff;
+    width: 100px;
+    z-index: 999;
+}
+
+h1 {
+    font-size: 88px;
+    text-transform: uppercase;
+    display: block;
+    opacity: 0;
+    margin-top: -200px;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.6s;
+}
+
+.sectactive h1 {
+    opacity: 1;
+    margin: 0;
+}
+
+h1 img {
+    width: 550px
+}
+
+.line {
+    clear: both;
+}
+
+.bigBtn {
+    background-color: #05f05b;
+    color: #fff;
+    font-size: 38px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px 30px;
+    font-weight: 800;
+    box-shadow: inset 0px 0 0 0 #000;
+    transition: box-shadow 0.25s, opacity 0.2s ease-in-out 0.8s;
+    opacity: 0;
+}
+
+.sectactive .bigBtn {
+    opacity: 1;
+}
+
+.bigBtn:hover,
+.bigBtn:focus {
+    box-shadow: inset 500px 0 0 0 #000;
+}
+
+.inside {}
+
+#scrollSide a {
+    transform: rotate(-90deg);
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    color: #000000;
+    font-size: 19px;
+    width: 145px;
+    /* background: url(../img/arrow.svg) no-repeat left center / 15px;*/
+    padding-left: 25px;
+    right: -18px;
+}
+
+#scrollSide a:hover {
+    margin-bottom: 10px;
+}
+
+#scrollSide a:after {
+    content: '.';
+    display: block;
+    background: url(../img/arrow.svg) no-repeat left center / 15px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 0;
+}
+
+#scrollSide a.scrollBack:after {
+    transform: rotate(-180deg);
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+.logo img {
+    width: 175px;
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    pointer-events: none;
+    will-change: transform;
+    mix-blend-mode: screen;
+    z-index: 1099;
+}
+
+#step3 .inside {
+    padding: 0 100px;
+    width: 100%;
+    position: relative;
+}
+
+#step3 .inside .line {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 50%;
+    height: 300px;
+}
+
+#step3 .inside .line .lineH {
+    width: 0%;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.2s ease-in;
+    transition-delay: 0.7s;
+}
+
+#step3.sectactive .inside .line .lineH {
+    width: 100%;
+}
+
+#step3 .inside .line .lineV {
+    width: 10px;
+    height: 0px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.2s ease-in;
+    transition-delay: 0.9s;
+}
+
+#step3.sectactive .inside .line .lineV {
+    height: 200px;
+}
+
+#step3 .inside .line .lineV:after {
+    content: '.';
+    position: absolute;
+    bottom: 210px;
+    font-size: 0;
+    display: block;
+    background-color: #fff;
+    right: 0;
+    width: 10px;
+    height: 0px;
+    transition: all 0.1s ease-in;
+    transition-delay: 1.15s;
+}
+
+#step3.sectactive .inside .line .lineV:after {
+    height: 20px;
+}
+
+#step3 .wrapVideo {
+    position: relative;
+    width: 60%!important;
+    opacity: 0;
+    transition: all 0.2s ease-in-out 0.7s;
+}
+
+#step3.sectactive .wrapVideo {
+    opacity: 1;
+}
+
+#step3 .wrapVideo .playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    transition: all 0.2s ease-in-out 0.1s;
+}
+
+#step3 .wrapVideo .playBtn:hover {
+    transform: scale(1.2)
+}
+
+#step3 video {
+    width: 100%!important;
+    z-index: 2;
+}
+
+#steps {
+    width: 3px;
+    height: 240px;
+    background-color: #e8e8e8;
+    position: fixed;
+    top: 26%;
+    right: 49px;
+}
+
+#steps.step1 b {
+    top: 0;
+}
+
+#steps.step2 b {
+    top: 25%;
+}
+
+#steps.step3 b {
+    top: 50%;
+}
+
+#steps.step4 b {
+    top: 75%;
+}
+
+#steps b {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 25%;
+    width: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #05f05b;
+    i {
+        position: absolute;
+        left: -30px;
+        top: 40%;
+        color: #000;
+        font-style: normal;
+        font-size: 17px;
+    }
+}
+
+.exclamation {
+    min-width: 65px;
+    height: 210px;
+    display: block;
+    font-size: 0;
+    position: relative;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.exclamation:before {
+    content: '.';
+    display: block;
+    width: 100%;
+    height: 60%;
+    background-color: #05f05b;
+    font-size: 0;
+    margin-top: 220px;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.6s;
+}
+
+.sectactive .exclamation:before {
+    margin-top: 10px;
+}
+
+.exclamation:after {
+    content: '.';
+    display: block;
+    width: 100%;
+    height: 25%;
+    background-color: #05f05b;
+    font-size: 0;
+    margin-top: 10%;
+    transition: all 0.2s ease-in;
+    transition-delay: 0.7s;
+}
+
+.sectactive .exclamation:after {
+    margin-top: 30%
+}
+
+@media (max-width: 1100px) {
+    #step2 .blocTitle {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    #scrollSide {
+        bottom: 0;
+        height: 70px;
+        width: 100vw;
+    }
+    #scrollSide a {
+        transform: rotate(0deg);
+        bottom: 24px;
+        font-size: 19px;
+        padding-left: 0;
+        padding-right: 25px;
+        right: 20px;
+        width: auto;
+    }
+    #scrollSide a:after {
+        right: 0;
+        left: auto;
+        font-size: 0;
+        transform: rotate(-90deg);
+    }
+    #steps {
+        width: 240px;
+        height: 4px;
+        bottom: 30px;
+        left: 20px;
+        top: auto;
+        right: auto;
+    }
+    #steps b {
+        width: 25%;
+        height: 5px;
+    }
+    #steps b i {
+        top: -27px;
+        left: 20px;
+    }
+    #steps.step1 b {
+        top: 0
+    }
+    #steps.step2 b {
+        top: 0;
+        left: 25%;
+    }
+    #steps.step3 b {
+        top: 0;
+        left: 50%;
+    }
+    #steps.step4 b {
+        top: 0;
+        left: 75%;
+    }
+    #scrollSide a.scrollBack:after {
+        transform: rotate(90deg);
+    }
+    .logo {
+        width: 100%;
+        height: 70px;
+        background-color: #fff;
+        left: 0;
+        top: 0;
+        z-index: 990;
+    }
+    .logo img {
+        margin: 12px 20px;
+        width: 130px;
+    }
+    .socials {
+        position: fixed;
+        top: 0;
+        z-index: 995;
+        right: 0;
+        left: auto;
+        bottom: auto;
+        margin: 20px 20px;
+    }
+    .socials li {
+        display: inline-block;
+        margin: 0 3px;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    section {
+        height: auto;
+    }
+    #step2 {
+        padding: 100px 0;
+    }
+    #step2 .blocTitle {
+        max-width: 100%;
+    }
+    #step2 .blocTitle span,
+    #step2 .blocTitle h2 {
+        font-size: 35px;
+    }
+    #step2 .blocContent {
+        padding: 0;
+    }
+    #step2 .blocContent p {
+        font-size: 20px;
+    }
+    #step2 .inside {
+        padding: 0 5%;
+    }
+    #step3 .inside {
+        padding: 0 5%;
+    }
+    #step3 {
+        padding: 100px 0;
+    }
+    #step3 .wrapVideo {
+        width: 100%!important;
+    }
+    #step3 .inside .line {
+        display: none;
+    }
+    .countdown ul li {
+        font-size: 43px;
+    }
+    .countdown ul li small {
+        font-size: 30px;
+    }
+    .exclamation {
+        min-width: 45px;
+        height: 150px;
+        margin-right: 20px;
+    }
+    h1 {
+        opacity: 0;
+    }
+    h1 img {
+        max-width: 100%;
+    }
+    .bigBtn {
+        opacity: 0;
+    }
+    .sectactive .bigBtn {
+        opacity: 1;
+    }
+    .sectactive h1 {
+        opacity: 1;
+    }
+    #step4 .inside {
+        padding: 100px 5%;
+    }
+    .bigBtn {
+        font-size: 25px;
+    }
+    .logo img.green {
+        display: block!important;
+    }
+    .logo img.white {
+        display: none!important;
+    }
+    #step1 video {
+        margin: 0;
+    }
+}
